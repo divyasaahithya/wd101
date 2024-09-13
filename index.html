@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-100 flex justify-center items-center">
+    <div class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-center mb-6">Registration Form</h2>
+        <form id="registrationForm" class="space-y-4">
+            
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" class="mt-1 block w-full px-3 py-2 border rounded-md" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="email" class="mt-1 block w-full px-3 py-2 border rounded-md" required>
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" class="mt-1 block w-full px-3 py-2 border rounded-md" required>
+            </div>
+            
+            <div>
+                <label for="dob" class="block text-sm font-medium text-gray-700">DOB</label>
+                <input type="date" id="dob" class="mt-1 block w-full px-3 py-2 border rounded-md" required>
+            </div>
+            
+            <div class="flex items-start">
+                <input type="checkbox" id="termsCheckbox" class="h-4 w-4 rounded" required>
+                <label for="termsCheckbox" class="ml-2 block text-sm text-gray-700">accept Terms & Conditions</label>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-green-500">Submit</button>
+        </form>
+        
+        <div class="mt-8">Entries</h2>
+            <table class="min-w-full table-auto border-collapse bg-white">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">Name</th>
+                        <th class="border px-4 py-2">Email</th>
+                        <th class="border px-4 py-2">Password</th>
+                        <th class="border px-4 py-2">Dob</th>
+                        <th class="border px-4 py-2">Accepted terms?</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="bg-gray-50"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
